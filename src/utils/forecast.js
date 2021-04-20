@@ -13,7 +13,7 @@ const forecast = (longitude, latitude, callback) => {
     } else if (body.error) {
       callback('Unable to find location! Try another search', undefined)
     } else {
-      callback(undefined, body.current.weather_descriptions[0] + ". It's currently " + body.current.temperature + " degrees out. It feels like " + body.current.feelslike + " degrees out."
+      callback(undefined, body.current.weather_descriptions[0] + ". It's currently " + body.current.temperature + " degrees out. It feels like " + body.current.feelslike + " degrees out. " + "By the way, wind speed is " + body.current.wind_speed + " and direction is " + body.current.wind_dir
       )
       //   console.log(response.body.forecast.weather_descriptions[0] + ". It'll be around " + response.body.forecast.avgtemp + " degrees out. And will be //around " + response.body.forecast.sunhour + " sunhours during the day.")
     }
